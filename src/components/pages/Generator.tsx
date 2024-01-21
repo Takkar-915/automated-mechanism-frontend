@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { DefaulLayout } from "../templates/DefaultLayout"
-import { GenerateResult } from "../molecules/GenerateResult";
+import { GenerateResult } from "../organisms/GenerateResult";
 import { Loading } from "../molecules/Loading";
 
 export const Generator = () => {
