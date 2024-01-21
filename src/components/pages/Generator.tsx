@@ -24,7 +24,7 @@ export const Generator = () => {
 
 
             <div className="flex justify-center items-center min-h-screen">
-                {!isLoading && !result ? <></> : (isLoading && !result ? <p>Generating...</p> : <GenerateResult />)}
+                {!isLoading && !result ? <></> : (isLoading && !result ? <p>メカニズムの生成中...</p> : <GenerateResult />)}
             </div>
         </DefaulLayout>
     )
