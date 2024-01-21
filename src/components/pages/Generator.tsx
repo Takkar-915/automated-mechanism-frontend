@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { DefaulLayout } from "../templates/DefaultLayout"
 import { GenerateResult } from "../molecules/GenerateResult";
+import { Loading } from "../molecules/Loading";
 
 export const Generator = () => {
 
@@ -22,10 +23,8 @@ export const Generator = () => {
                 メカニズムを生成する
             </button>
 
+            {!isLoading && !result ? <></> : (isLoading && !result ? <Loading /> : <GenerateResult />)}
 
-            <div className="flex justify-center items-center min-h-screen">
-                {!isLoading && !result ? <></> : (isLoading && !result ? <p>メカニズムの生成中...</p> : <GenerateResult />)}
-            </div>
         </DefaulLayout>
     )
 }
