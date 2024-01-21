@@ -1,18 +1,31 @@
+import { useState } from "react";
 import { DefaulLayout } from "../templates/DefaultLayout"
+import { GenerateResult } from "../molecules/GenerateResult";
+
 export const Generator = () => {
+
+    const [isLoading, setIsLoading] = useState(false);
+    const [result, setResult] = useState(false);
+
+    const generateMechanism = async (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
+        e.preventDefault();
+        setIsLoading(true);
+
+        await new Promise(resolve => setTimeout(resolve, 3000));
+        setIsLoading(false);
+        setResult(true);
+    }
+
     return (
         <DefaulLayout>
-            <section className="text-gray-600 body-font">
-                <div className="container px-5 py-24 mx-auto">
-                    <div className="flex flex-col text-center w-full mb-20">
-                        <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">メカニズム生成</h1>
+            <button onClick={generateMechanism} className="flex mx-auto mt-16 text-white bg-pink-500 border-0 py-2 px-8 focus:outline-none hover:bg-pink-600 rounded text-lg">
+                メカニズムを生成する
+            </button>
 
-                        <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-                            メカニズムを生成します．
-                        </p>
-                    </div>
-                </div>
-            </section>
+
+            <div className="flex justify-center items-center min-h-screen">
+                {!isLoading && !result ? <></> : (isLoading && !result ? <p>Generating...</p> : <GenerateResult />)}
+            </div>
         </DefaulLayout>
     )
 }
