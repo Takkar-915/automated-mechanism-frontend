@@ -2,6 +2,7 @@ import { useState } from "react";
 import { DefaulLayout } from "../templates/DefaultLayout"
 import { GenerateResult } from "../organisms/GenerateResult";
 import { Loading } from "../molecules/Loading";
+import Button from "../atoms/button/Button";
 
 export const Generator = () => {
 
@@ -19,9 +20,7 @@ export const Generator = () => {
 
     return (
         <DefaulLayout>
-            <button onClick={generateMechanism} className="flex mx-auto mt-16 text-white bg-pink-500 border-0 py-2 px-8 focus:outline-none hover:bg-pink-600 rounded text-lg">
-                メカニズムを生成する
-            </button>
+            <Button onClick={generateMechanism}>メカニズムを生成する</Button>
 
             {!isLoading && !result ? <></> : (isLoading && !result ? <Loading /> : <GenerateResult />)}
 
