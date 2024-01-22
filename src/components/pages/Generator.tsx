@@ -3,85 +3,12 @@ import { DefaultLayout } from "../templates/DefaultLayout"
 import { GenerateResult } from "../organisms/GenerateResult";
 import { Loading } from "../molecules/Loading";
 import Button from "../atoms/Button";
-import { Label } from "../atoms/Label";
-import { NumberInput } from "../atoms/NumberInput";
-
-const CustomerNumForm = () => {
-    const [customerNum, setCostomerNum] = useState(0);
-    return (
-        <div className="flex justify-center mt-12">
-            <div className="flex flex-col w-full max-w-md">
-                <Label text="顧客数" />
-                <NumberInput type="number" value={customerNum} onChange={(e) => setCostomerNum(parseInt(e.target.value))} placeholder="顧客数を入力" />
-            </div>
-        </div>
-    );
-}
-
-const TheatreNumForm = () => {
-    const [theatreNum, setTheatreNum] = useState(0);
-    return (
-        <div className="flex justify-center mt-12">
-            <div className="flex flex-col w-full max-w-md">
-                <Label text="映画館数" />
-                <NumberInput type="number" value={theatreNum} onChange={(e) => setTheatreNum(parseInt(e.target.value))} placeholder="映画館数を入力" />
-            </div>
-        </div>
-    );
-}
-
-const BidLowerLimitForm = () => {
-    const [bidLowerLimit, setBidLowerLimit] = useState(0);
-    return (
-        <div className="flex justify-center mt-12">
-            <div className="flex flex-col w-full max-w-md">
-                <Label text="入札値の下限値" />
-                <NumberInput type="number" value={bidLowerLimit} onChange={(e) => setBidLowerLimit(parseFloat(e.target.value))} placeholder="入札値の下限値を入力" />
-            </div>
-        </div>
-    );
-}
-
-const BidUpperLimitForm = () => {
-    const [bidUpperLimit, setBidUpperLimit] = useState(0);
-    return (
-        <div className="flex justify-center mt-12">
-            <div className="flex flex-col w-full max-w-md">
-                <Label text="入札値の上限値" />
-                <NumberInput type="number" value={bidUpperLimit} onChange={(e) => setBidUpperLimit(parseFloat(e.target.value))} placeholder="入札値の上限値を入力" />
-            </div>
-        </div>
-    );
-}
-
-const BidDifferenceForm = () => {
-    const [bidDifference, setBidDifference] = useState(0);
-    return (
-        <div className="flex justify-center mt-12">
-            <div className="flex flex-col w-full max-w-md">
-                <Label text="入札の下限値と上限値の差分の最大値" />
-                <NumberInput type="number" value={bidDifference} onChange={(e) => setBidDifference(parseFloat(e.target.value))} placeholder="入札の下限値と上限値の差分を入力" />
-            </div>
-        </div>
-    );
-}
-
-
-const BidTimingForm = () => {
-    const [bidTiming, setBidTiming] = useState('');
-
-    return (
-        <div className="flex justify-center mt-12">
-            <div className="flex flex-col w-full max-w-md">
-                <label className="mb-2 font-bold text-lg text-gray-900">入札のタイミングによる損得</label>
-                <select value={bidTiming} onChange={(e) => setBidTiming(e.target.value)} className="px-3 py-2 border border-gray-300 bg-white rounded-md w-full">
-                    <option value="middle">タイミングによる損得は扱わない</option>
-                    <option value="early">入札がはやいほど得をする</option>
-                </select>
-            </div>
-        </div>
-    );
-}
+import { CustomerNumForm } from "../molecules/CustomerNumForm";
+import { TheatreNumForm } from "../molecules/TheatreNumForm";
+import { BidLowerLimitForm } from "../molecules/BidLowerLimitForm";
+import { BidUpperLimitForm } from "../molecules/BidUpperLimitForm";
+import { BidDifferenceForm } from "../molecules/BidDifferenceForm";
+import { BidTimingForm } from "../molecules/BidTimingForm";
 
 
 export const Generator = () => {
@@ -110,8 +37,6 @@ export const Generator = () => {
             <BidUpperLimitForm />
             <BidDifferenceForm />
             <BidTimingForm />
-
-
 
             <Button onClick={generateMechanism}>メカニズムを生成する</Button>
 
