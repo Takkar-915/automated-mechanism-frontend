@@ -2,7 +2,7 @@ import { useState } from "react";
 import { DefaultLayout } from "../templates/DefaultLayout"
 import { Loading } from "../molecules/Loading";
 import Button from "../atoms/Button";
-import { AllocationResult } from "./AllocationResult";
+import { AllocationResult } from "../organisms/AllocationResult";
 import { CustomerBid } from "../molecules/CustomerBid";
 import { TheatreBid } from "../molecules/TheatreBid";
 
