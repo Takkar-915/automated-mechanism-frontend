@@ -1,5 +1,5 @@
 import { Header } from "../atoms/layout/Header"
-export const DefaulLayout = (props: any) => {
+export const DefaultLayout = (props: any) => {
     const { children } = props
     return (
         <>

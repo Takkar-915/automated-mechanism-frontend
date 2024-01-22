@@ -1,4 +1,9 @@
+import { useNavigate } from 'react-router-dom';
 export const GenerateResult = () => {
+    const navigate = useNavigate();
+    const handleOnClick = () => {
+        navigate("/mechanisms");
+    };
     return (
         <section className="text-gray-600 body-font">
             <div className="container px-5 py-24 mx-auto">
@@ -50,7 +55,7 @@ export const GenerateResult = () => {
                             <path d="M5 12h14M12 5l7 7-7 7"></path>
                         </svg>
                     </a>
-                    <button className="flex ml-auto text-white bg-pink-500 border-0 py-2 px-6 focus:outline-none hover:bg-pink-600 rounded">保存</button>
+                    <button onClick={handleOnClick} className="flex ml-auto text-white bg-pink-500 border-0 py-2 px-6 focus:outline-none hover:bg-pink-600 rounded">保存</button>
                 </div>
             </div>
         </section>

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { DefaulLayout } from "../templates/DefaultLayout"
+import { DefaultLayout } from "../templates/DefaultLayout"
 import { GenerateResult } from "../organisms/GenerateResult";
 import { Loading } from "../molecules/Loading";
 import Button from "../atoms/Button";
@@ -57,7 +57,7 @@ const BidDifferenceForm = () => {
     return (
         <div className="flex justify-center mt-12">
             <div className="flex flex-col w-full max-w-md">
-                <label className="mb-2 font-bold text-lg text-gray-900">入札の下限値と上限値の差分</label>
+                <label className="mb-2 font-bold text-lg text-gray-900">入札の下限値と上限値の差分の最大値</label>
                 <input type="number" value={bidDifference} onChange={(e) => setBidDifference(parseFloat(e.target.value))} placeholder="入札の下限値と上限値の差分を入力" className="px-3 py-2 border border-gray-300 rounded-md w-full" />
             </div>
         </div>
@@ -97,7 +97,7 @@ export const Generator = () => {
     }
 
     return (
-        <DefaulLayout>
+        <DefaultLayout>
             <div className="flex flex-wrap w-full mb-20 flex-col items-center text-center">
                 <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">メカニズム生成</h1>
                 <p className="lg:w-1/2 w-full leading-relaxed text-gray-500">パラメータを設定してください．</p>
@@ -115,6 +115,6 @@ export const Generator = () => {
 
             {!isLoading && !result ? <></> : (isLoading && !result ? <Loading /> : <GenerateResult />)}
 
-        </DefaulLayout>
+        </DefaultLayout>
     )
 }

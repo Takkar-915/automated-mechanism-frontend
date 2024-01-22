@@ -1,7 +1,8 @@
-import { DefaulLayout } from "../templates/DefaultLayout"
+import { DefaultLayout } from "../templates/DefaultLayout"
+import { Link } from "react-router-dom";
 export const Mechanisms = () => {
     return (
-        <DefaulLayout>
+        <DefaultLayout>
             <section className="text-gray-600 body-font">
                 <div className="container px-5 py-24 mx-auto">
                     <div className="flex flex-wrap w-full mb-20 flex-col items-center text-center">
@@ -14,7 +15,9 @@ export const Mechanisms = () => {
                                 <h2 className="text-lg text-gray-900 font-medium title-font mb-2">生成したメカニズム1</h2>
                                 <p className="leading-relaxed text-base">created at {new Date().toISOString()}</p>
                                 <p className="leading-relaxed text-base">簡単にどんな条件下で動作するメカニズムかの説明</p>
-                                <button className="flex mx-auto mt-16 text-white bg-pink-500 border-0 py-2 px-8 focus:outline-none hover:bg-pink-600 rounded text-lg">使用する</button>
+                                <Link to="/mechanisms/1000">
+                                    <button className="flex mx-auto mt-16 text-white bg-pink-500 border-0 py-2 px-8 focus:outline-none hover:bg-pink-600 rounded text-lg">使用する</button>
+                                </Link>
                             </div>
                         </div>
                         <div className="xl:w-1/3 md:w-1/2 p-4">
@@ -24,7 +27,9 @@ export const Mechanisms = () => {
                                     created at {new Date(Date.now() - 60 * 60 * 1000).toISOString()}
                                 </p>
                                 <p className="leading-relaxed text-base">簡単にどんな条件下で動作するメカニズムかの説明</p>
-                                <button className="flex mx-auto mt-16 text-white bg-pink-500 border-0 py-2 px-8 focus:outline-none hover:bg-pink-600 rounded text-lg">使用する</button>
+                                <Link to="/mechanisms/2000">
+                                    <button className="flex mx-auto mt-16 text-white bg-pink-500 border-0 py-2 px-8 focus:outline-none hover:bg-pink-600 rounded text-lg">使用する</button>
+                                </Link>
                             </div>
                         </div>
                         <div className="xl:w-1/3 md:w-1/2 p-4">
@@ -34,7 +39,9 @@ export const Mechanisms = () => {
                                     created at {new Date(Date.now() - 60 * 60 * 2000).toISOString()}
                                 </p>
                                 <p className="leading-relaxed text-base">簡単にどんな条件下で動作するメカニズムかの説明</p>
-                                <button className="flex mx-auto mt-16 text-white bg-pink-500 border-0 py-2 px-8 focus:outline-none hover:bg-pink-600 rounded text-lg">使用する</button>
+                                <Link to="/mechanisms/3000">
+                                    <button className="flex mx-auto mt-16 text-white bg-pink-500 border-0 py-2 px-8 focus:outline-none hover:bg-pink-600 rounded text-lg">使用する</button>
+                                </Link>
                             </div>
                         </div>
                         <div className="xl:w-1/3 md:w-1/2 p-4">
@@ -44,7 +51,9 @@ export const Mechanisms = () => {
                                     created at {new Date(Date.now() - 60 * 60 * 4000).toISOString()}
                                 </p>
                                 <p className="leading-relaxed text-base">簡単にどんな条件下で動作するメカニズムかの説明</p>
-                                <button className="flex mx-auto mt-16 text-white bg-pink-500 border-0 py-2 px-8 focus:outline-none hover:bg-pink-600 rounded text-lg">使用する</button>
+                                <Link to="/mechanisms/4000">
+                                    <button className="flex mx-auto mt-16 text-white bg-pink-500 border-0 py-2 px-8 focus:outline-none hover:bg-pink-600 rounded text-lg">使用する</button>
+                                </Link>
                             </div>
                         </div>
                         <div className="xl:w-1/3 md:w-1/2 p-4">
@@ -54,7 +63,9 @@ export const Mechanisms = () => {
                                     created at {new Date(Date.now() - 60 * 60 * 5000).toISOString()}
                                 </p>
                                 <p className="leading-relaxed text-base">簡単にどんな条件下で動作するメカニズムかの説明</p>
-                                <button className="flex mx-auto mt-16 text-white bg-pink-500 border-0 py-2 px-8 focus:outline-none hover:bg-pink-600 rounded text-lg">使用する</button>
+                                <Link to="/mechanisms/5000">
+                                    <button className="flex mx-auto mt-16 text-white bg-pink-500 border-0 py-2 px-8 focus:outline-none hover:bg-pink-600 rounded text-lg">使用する</button>
+                                </Link>
                             </div>
                         </div>
                         <div className="xl:w-1/3 md:w-1/2 p-4">
@@ -64,12 +75,14 @@ export const Mechanisms = () => {
                                     created at {new Date(Date.now() - 60 * 60 * 6000).toISOString()}
                                 </p>
                                 <p className="leading-relaxed text-base">簡単にどんな条件下で動作するメカニズムかの説明</p>
-                                <button className="flex mx-auto mt-16 text-white bg-pink-500 border-0 py-2 px-8 focus:outline-none hover:bg-pink-600 rounded text-lg">使用する</button>
+                                <Link to="/mechanisms/6000">
+                                    <button className="flex mx-auto mt-16 text-white bg-pink-500 border-0 py-2 px-8 focus:outline-none hover:bg-pink-600 rounded text-lg">使用する</button>
+                                </Link>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-        </DefaulLayout >
+        </DefaultLayout >
     )
 }

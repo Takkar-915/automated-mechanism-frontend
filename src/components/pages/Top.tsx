@@ -1,10 +1,10 @@
 import { useNavigate } from "react-router-dom";
-import { DefaulLayout } from "../templates/DefaultLayout";
+import { DefaultLayout } from "../templates/DefaultLayout";
 
 export const Top = () => {
     const navigate = useNavigate();
     return (
-        <DefaulLayout>
+        <DefaultLayout>
             <section className="text-gray-600 body-font">
                 <div className="container px-5 py-24 mx-auto">
                     <div className="flex flex-col text-center w-full mb-20">
@@ -18,6 +18,6 @@ export const Top = () => {
                         </p>
                     </div>
                 </div>
-            </section>       </DefaulLayout>
+            </section>       </DefaultLayout>
     )
 }
