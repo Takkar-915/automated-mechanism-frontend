@@ -3,14 +3,16 @@ import { DefaultLayout } from "../templates/DefaultLayout"
 import { GenerateResult } from "../organisms/GenerateResult";
 import { Loading } from "../molecules/Loading";
 import Button from "../atoms/Button";
+import { Label } from "../atoms/Label";
+import { NumberInput } from "../atoms/NumberInput";
 
 const CustomerNumForm = () => {
     const [customerNum, setCostomerNum] = useState(0);
     return (
         <div className="flex justify-center mt-12">
             <div className="flex flex-col w-full max-w-md">
-                <label className="mb-2 font-bold text-lg text-gray-900">顧客数</label>
-                <input type="number" value={customerNum} onChange={(e) => setCostomerNum(parseInt(e.target.value))} placeholder="顧客数を入力" className="px-3 py-2 border border-gray-300 rounded-md w-full" />
+                <Label text="顧客数" />
+                <NumberInput type="number" value={customerNum} onChange={(e) => setCostomerNum(parseInt(e.target.value))} placeholder="顧客数を入力" />
             </div>
         </div>
     );
@@ -21,8 +23,8 @@ const TheatreNumForm = () => {
     return (
         <div className="flex justify-center mt-12">
             <div className="flex flex-col w-full max-w-md">
-                <label className="mb-2 font-bold text-lg text-gray-900">映画館数</label>
-                <input type="number" value={theatreNum} onChange={(e) => setTheatreNum(parseInt(e.target.value))} placeholder="映画館数を入力" className="px-3 py-2 border border-gray-300 rounded-md w-full" />
+                <Label text="映画館数" />
+                <NumberInput type="number" value={theatreNum} onChange={(e) => setTheatreNum(parseInt(e.target.value))} placeholder="映画館数を入力" />
             </div>
         </div>
     );
@@ -33,8 +35,8 @@ const BidLowerLimitForm = () => {
     return (
         <div className="flex justify-center mt-12">
             <div className="flex flex-col w-full max-w-md">
-                <label className="mb-2 font-bold text-lg text-gray-900">入札の下限値</label>
-                <input type="number" value={bidLowerLimit} onChange={(e) => setBidLowerLimit(parseFloat(e.target.value))} placeholder="入札の下限値を入力" className="px-3 py-2 border border-gray-300 rounded-md w-full" />
+                <Label text="入札値の下限値" />
+                <NumberInput type="number" value={bidLowerLimit} onChange={(e) => setBidLowerLimit(parseFloat(e.target.value))} placeholder="入札値の下限値を入力" />
             </div>
         </div>
     );
@@ -45,8 +47,8 @@ const BidUpperLimitForm = () => {
     return (
         <div className="flex justify-center mt-12">
             <div className="flex flex-col w-full max-w-md">
-                <label className="mb-2 font-bold text-lg text-gray-900">入札の上限値</label>
-                <input type="number" value={bidUpperLimit} onChange={(e) => setBidUpperLimit(parseFloat(e.target.value))} placeholder="入札の上限値を入力" className="px-3 py-2 border border-gray-300 rounded-md w-full" />
+                <Label text="入札値の上限値" />
+                <NumberInput type="number" value={bidUpperLimit} onChange={(e) => setBidUpperLimit(parseFloat(e.target.value))} placeholder="入札値の上限値を入力" />
             </div>
         </div>
     );
@@ -57,8 +59,8 @@ const BidDifferenceForm = () => {
     return (
         <div className="flex justify-center mt-12">
             <div className="flex flex-col w-full max-w-md">
-                <label className="mb-2 font-bold text-lg text-gray-900">入札の下限値と上限値の差分の最大値</label>
-                <input type="number" value={bidDifference} onChange={(e) => setBidDifference(parseFloat(e.target.value))} placeholder="入札の下限値と上限値の差分を入力" className="px-3 py-2 border border-gray-300 rounded-md w-full" />
+                <Label text="入札の下限値と上限値の差分の最大値" />
+                <NumberInput type="number" value={bidDifference} onChange={(e) => setBidDifference(parseFloat(e.target.value))} placeholder="入札の下限値と上限値の差分を入力" />
             </div>
         </div>
     );
