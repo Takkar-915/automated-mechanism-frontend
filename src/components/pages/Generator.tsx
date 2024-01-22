@@ -113,7 +113,7 @@ export const Generator = () => {
 
             <Button onClick={generateMechanism}>メカニズムを生成する</Button>
 
-            {!isLoading && !result ? <></> : (isLoading && !result ? <Loading /> : <GenerateResult />)}
+            {!isLoading && !result ? <></> : (isLoading && !result ? <Loading message="メカニズムの生成中..." /> : <GenerateResult />)}
 
         </DefaultLayout>
     )

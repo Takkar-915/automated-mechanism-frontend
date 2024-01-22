@@ -1,7 +1,10 @@
-export const Loading = () => {
+interface LoadingProps {
+    message: string;
+}
+export const Loading = (props: LoadingProps) => {
     return (
         <div className="flex justify-center items-center min-h-screen">
-            <p>メカニズムの生成中...</p>
+            <p>{props.message}</p>
         </div>
     )
 }
