@@ -2,7 +2,6 @@ import { useNavigate } from "react-router-dom";
 import { DefaultLayout } from "../templates/DefaultLayout";
 
 export const Top = () => {
-    const navigate = useNavigate();
     return (
         <DefaultLayout>
             <section className="text-gray-600 body-font">
